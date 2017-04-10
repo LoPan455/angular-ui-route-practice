@@ -1,0 +1,23 @@
+<div ng-controller="BasicProfile" ng-cloak>
+  <md-content class="md-padding">
+    <md-nav-bar
+      md-selected-nav-item="currentNavItem"
+      nav-bar-aria-label="navigation links"
+      max-width="100">
+      <md-nav-item md-nav-sref="basicProfile.questions" name="questions">
+        Basics
+      </md-nav-item>
+      <md-nav-item md-nav-sref="basicProfile.household" name="household">
+        Household
+      </md-nav-item>
+      <md-nav-item md-nav-click="goto('page3')" name="page3">
+        My Money
+      </md-nav-item>
+      <md-nav-item md-nav-sref='/'>Close
+      </md-nav-item>
+    </md-nav-bar>
+    <div class="ext-content">
+      <div ui-view></div>
+    </div>
+  </md-content>
+</div>

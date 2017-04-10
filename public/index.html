@@ -3,19 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>Angular Project Template</title>
-    <link rel="stylesheet" href="/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     <link rel="stylesheet" href="/css/styles.css" />
-    <script type="text/javascript" src="/vendor/angular.min.js"></script>
-    <script type="text/javascript" src="/vendor/angular-route.min.js"></script>
+
+
+    <!-- Angular Material requires Angular.js Libraries -->
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+      <!-- Angular Material Library -->
+      <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+      <script src="/vendor/angular-ui-router.min.js" charset="utf-8"></script>
+
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/factories/data.factory.js"></script>
     <script type="text/javascript" src="/scripts/controllers/home.controller.js"></script>
     <script type="text/javascript" src="/scripts/controllers/one.controller.js"></script>
     <script type="text/javascript" src="/scripts/controllers/two.controller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/sideNav.controller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/basicProfile.controller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/budget.controller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/balanceSheet.controller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/household.controller.js"></script>
+    <script type="text/javascript" src="scripts/config/stateProvider.js"></script>
   </head>
-  <body >
-    <header class="jumbotron text-center" ng-include="'/views/templates/header.html'"></header>
-    <nav ng-include="'views/templates/nav.html'"></nav>
-    <main ng-view></main>
+  <body>
+    <div ng-include="'views/templates/header.html'"></div>
+    <div layout="row">
+      <div ng-include="'views/templates/side-nav.html'"></div>
+      <ui-view></ui-view>
+    </div>
+
   </body>
 </html>

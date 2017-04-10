@@ -1,4 +1,4 @@
-myApp.controller('OneController',['DataFactory',function(DataFactory) {
+app.controller('OneController',['DataFactory',function(DataFactory) {
 
 console.log('One controller running');
 
